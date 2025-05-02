@@ -34,3 +34,9 @@ def calcula_pontos_regra_simples(dadosrolados):
             s6 += 6
     somasimples = {1:s1, 2:s2, 3:s3, 4:s4, 5:s5, 6:s6}
     return somasimples
+
+def calcula_pontos_soma(dadosrolados):
+    soma = 0
+    for dado in dadosrolados:
+        soma += dado
+    return soma
