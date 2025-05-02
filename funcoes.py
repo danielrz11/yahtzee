@@ -6,3 +6,8 @@ def guardar_dado(dadosrolados,dadosestoque,dadoparaguardar):
     dadosestoque.append(dadosrolados[dadoparaguardar])
     del dadosrolados[dadoparaguardar]
     return [dadosrolados,dadosestoque]
+
+def remover_dado(dadosrolados,dadosestoque,dadopararemover):
+    dadosrolados.append(dadosestoque[dadopararemover])
+    del dadosestoque[dadopararemover]
+    return [dadosrolados,dadosestoque]
