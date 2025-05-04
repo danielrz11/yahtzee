@@ -153,3 +153,32 @@ def calcula_pontos_regra_avancada(dadosrolados):
           'quadra':calcula_pontos_quadra(dadosrolados),
           'cinco_iguais':calcula_pontos_quina(dadosrolados)}
     return ra
+
+def faz_jogada(dados, categoria,cartela):
+    if categoria == '1':
+        cartela['regra_simples'][1] = calcula_pontos_regra_simples(dados)[1]
+    elif categoria == '2':
+        cartela['regra_simples'][2] = calcula_pontos_regra_simples(dados)[2]
+    elif categoria == '3':
+        cartela['regra_simples'][3] = calcula_pontos_regra_simples(dados)[3]
+    elif categoria == '4':
+        cartela['regra_simples'][4] = calcula_pontos_regra_simples(dados)[4]
+    elif categoria == '5':
+        cartela['regra_simples'][5] = calcula_pontos_regra_simples(dados)[5]
+    elif categoria == '6':
+        cartela['regra_simples'][6] = calcula_pontos_regra_simples(dados)[6]
+
+    elif categoria == 'sem_combinacao':
+        cartela['regra_avancada']['sem_combinacao'] = calcula_pontos_regra_avancada(dados)['sem_combinacao']
+    elif categoria == 'sequencia_baixa':
+        cartela['regra_avancada']['sequencia_baixa'] = calcula_pontos_regra_avancada(dados)['sequencia_baixa']
+    elif categoria == 'sequencia_alta':
+        cartela['regra_avancada']['sequencia_alta'] = calcula_pontos_regra_avancada(dados)['sequencia_alta']
+    elif categoria == 'full_house':
+        cartela['regra_avancada']['full_house'] = calcula_pontos_regra_avancada(dados)['full_house']
+    elif categoria == 'quadra': 
+        cartela['regra_avancada']['quadra'] = calcula_pontos_regra_avancada(dados)['quadra']
+    elif categoria == 'cinco_iguais':
+        cartela['regra_avancada']['cinco_iguais'] = calcula_pontos_regra_avancada(dados)['cinco_iguais']
+
+    return cartela
