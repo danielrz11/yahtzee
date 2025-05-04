@@ -12,6 +12,7 @@ cartela = {
     }
 }
 
+print(imprime_cartela(cartela))
 for rodada in range(12):
     dados_rolados = rolar_dados(5)
     dados_guardados = []
@@ -50,19 +51,22 @@ for rodada in range(12):
         elif acao == "4":
             imprime_cartela(cartela)
         elif acao == "0":
-            print("Digite a combinação desejada:")
-            categoria = input(">")
-            if categoria in ["1", "2", "3", "4", "5", "6"]:
-                if cartela["regra_simples"][int(categoria)] != -1:
-                    print("Essa combinação já foi utilizada.")
-                    continue
-            elif categoria in cartela["regra_avancada"]:
-                if cartela["regra_avancada"][categoria] != -1:
-                    print("Essa combinação já foi utilizada.")
-                    continue
-            else:
-                print("Combinação inválida. Tente novamente.")
-                continue
+            while "validacao":
+                print("Digite a combinação desejada:")
+                categoria = input(">")
+                if categoria in ["1", "2", "3", "4", "5", "6"]:
+                    if cartela["regra_simples"][int(categoria)] != -1:
+                        print("Essa combinação já foi utilizada.")
+                    else:
+                        break
+                    
+                elif categoria in cartela["regra_avancada"]:
+                    if cartela["regra_avancada"][categoria] != -1:
+                        print("Essa combinação já foi utilizada.")
+                    else:
+                        break
+                else:
+                    print("Combinação inválida. Tente novamente.")
 
             dados = dados_guardados + dados_rolados
             faz_jogada(dados, categoria, cartela)
