@@ -40,3 +40,13 @@ def calcula_pontos_soma(dadosrolados):
     for dado in dadosrolados:
         soma += dado
     return soma
+
+def calcula_pontos_sequencia_baixa(dadosrolados):                   
+    if 1 in dadosrolados and 2 in dadosrolados and 3 in dadosrolados and 4 in dadosrolados:  
+        return 15
+    if 2 in dadosrolados and 3 in dadosrolados and 4 in dadosrolados and 5 in dadosrolados:
+        return 15
+    if 3 in dadosrolados and 4 in dadosrolados and 5 in dadosrolados and 6 in dadosrolados:
+        return 15
+    else:
+        return 0
