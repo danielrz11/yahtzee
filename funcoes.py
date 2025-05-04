@@ -50,3 +50,11 @@ def calcula_pontos_sequencia_baixa(dadosrolados):
         return 15
     else:
         return 0
+
+def calcula_pontos_sequencia_alta(dadosrolados):
+    if 2 in dadosrolados and 3 in dadosrolados and 4 in dadosrolados and 5 in dadosrolados and 6 in dadosrolados:
+        return 30
+    if 1 in dadosrolados and 2 in dadosrolados and 3 in dadosrolados and 4 in dadosrolados and 5 in dadosrolados:
+        return 30
+    else:
+        return 0 
