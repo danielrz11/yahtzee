@@ -58,3 +58,29 @@ def calcula_pontos_sequencia_alta(dadosrolados):
         return 30
     else:
         return 0 
+
+def calcula_pontos_full_house(dadosrolados):
+    s1 = 0
+    s2 = 0
+    s3 = 0
+    s4 = 0
+    s5 = 0
+    s6 = 0
+    for dado in dadosrolados:
+        if dado == 1:
+            s1 += 1
+        elif dado == 2:
+            s2 += 1
+        elif dado == 3:
+            s3 += 1
+        elif dado == 4:
+            s4 += 1
+        elif dado == 5:
+            s5 += 1
+        elif dado == 6:
+            s6 += 1
+    listaquantdados = [s1,s2,s3,s4,s5,s6]
+    if 3 in listaquantdados and 2 in listaquantdados:
+        return s1*1 + s2*2 + s3*3 + s4*4 + s5*5 + s6*6
+    else:
+        return 0
