@@ -144,3 +144,12 @@ def calcula_pontos_quina(dadosrolados):
         return 50 
     else:
         return 0
+
+def calcula_pontos_regra_avancada(dadosrolados):
+    ra = {'sem_combinacao':calcula_pontos_soma(dadosrolados),
+          'sequencia_baixa':calcula_pontos_sequencia_baixa(dadosrolados),
+          'sequencia_alta':calcula_pontos_sequencia_alta(dadosrolados),
+          'full_house':calcula_pontos_full_house(dadosrolados),
+          'quadra':calcula_pontos_quadra(dadosrolados),
+          'cinco_iguais':calcula_pontos_quina(dadosrolados)}
+    return ra
