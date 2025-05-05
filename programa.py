@@ -22,11 +22,11 @@ for rodada in range(12):
         print("Dados rolados:", dados_rolados)
         print("Dados guardados:", dados_guardados)
         print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
-        acao = input(">")
+        acao = input("")
 
         if acao == "1":
             print("Digite o índice do dado a ser guardado (0 a 4):")
-            indice = int(input(">"))
+            indice = int(input(""))
             if indice >= 0 and indice < len(dados_rolados):
                 resultado = guardar_dado(dados_rolados, dados_guardados, indice)
                 dados_rolados = resultado[0]
@@ -35,7 +35,7 @@ for rodada in range(12):
                 print("Índice inválido.")
         elif acao == "2":
             print("Digite o índice do dado a ser removido (0 a 4):")
-            indice = int(input(">"))
+            indice = int(input(""))
             if indice >= 0 and indice < len(dados_guardados):
                 resultado = remover_dado(dados_rolados, dados_guardados, indice)
                 dados_rolados = resultado[0]
@@ -53,7 +53,7 @@ for rodada in range(12):
         elif acao == "0":
             while True:
                 print("Digite a combinação desejada:")
-                categoria = input(">")
+                categoria = input("")
                 if categoria in ["1", "2", "3", "4", "5", "6"]:
                     if cartela["regra_simples"][int(categoria)] != -1:
                         print("Essa combinação já foi utilizada.")
