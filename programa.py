@@ -12,7 +12,7 @@ cartela = {
     }
 }
 
-print(imprime_cartela(cartela))
+imprime_cartela(cartela)
 for rodada in range(12):
     dados_rolados = rolar_dados(5)
     dados_guardados = []
