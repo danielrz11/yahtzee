@@ -73,3 +73,21 @@ for rodada in range(12):
             break
         else:
             print("Opção inválida. Tente novamente.")
+imprime_cartela(cartela)
+
+total = 0
+simples = 0
+
+for i in [1, 2, 3, 4, 5, 6]:
+    if cartela["regra_simples"][i] != -1:
+        simples += cartela["regra_simples"][i]
+        total += cartela["regra_simples"][i]
+
+for nome in ['sem_combinacao', 'quadra', 'full_house', 'sequencia_baixa', 'sequencia_alta', 'cinco_iguais']:
+    if cartela["regra_avancada"][nome] != -1:
+        total += cartela["regra_avancada"][nome]
+
+if simples >= 63:
+    total += 35
+
+print("Pontuação total:", total)
