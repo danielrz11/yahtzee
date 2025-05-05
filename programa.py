@@ -51,7 +51,7 @@ for rodada in range(12):
         elif acao == "4":
             imprime_cartela(cartela)
         elif acao == "0":
-            while "validacao":
+            while True:
                 print("Digite a combinação desejada:")
                 categoria = input(">")
                 if categoria in ["1", "2", "3", "4", "5", "6"]:
