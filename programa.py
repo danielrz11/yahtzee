@@ -74,7 +74,6 @@ for rodada in range(12):
             break
         else:
             print("Opção inválida. Tente novamente.")
-imprime_cartela(cartela)
 
 total = 0
 simples = 0
