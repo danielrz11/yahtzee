@@ -70,6 +70,7 @@ for rodada in range(12):
 
             dados = dados_guardados + dados_rolados
             faz_jogada(dados, categoria, cartela)
+            imprime_cartela(cartela)
             break
         else:
             print("Opção inválida. Tente novamente.")
